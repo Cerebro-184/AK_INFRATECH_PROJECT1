@@ -45,18 +45,21 @@ document.addEventListener("keydown", (e) => {
     if(key === "Enter"){
         calculate("=");
     }
-    else if(key === "Backspace"){
-        calculate("DEL");
-    }
     else if(key === "Escape"){
         calculate("C");
     }
-    else if (/[0-9]/.test(key) || operators.includes(key)) {
+    else if(key === "Backspace"){
+        calculate("DEL");
+        if(output === ""){
+            calculate("C");
+        }
+    }
+    else if (/[0-9]/.test(key) || ["%", "x", "÷", "+", "-", "=", "^", ".", "^", "(", ")"].includes(key)) {
         const value = key === "*" ? "x" : key;
         calculate(value);
     }
-    else{
+    else if(key !== "Shift"){
         output = "Syntax Error"
-        display.value = output || "0";
     }
+    display.value = output || "0";
 });
