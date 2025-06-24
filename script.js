@@ -15,7 +15,7 @@ const calculate = (btn_val) => {
         output = output.replace(/%/g, "/100*").replace(/x/g, "*").replace(/÷/g, "/").replace(/\^/g, "**");
         try {
             let result = eval(output);
-            output = Number.isFinite(result) ? parseFloat(result.toFixed(2)).toString() : "Math Error";
+            output = Number.isFinite(result) ? parseFloat(result.toFixed(6)).toString() : "Math Error";
         }
         catch {
             output = "Syntax Error";
