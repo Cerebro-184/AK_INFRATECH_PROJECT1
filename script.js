@@ -37,29 +37,3 @@ const calculate = (btn_val) => {
 buttons.forEach((button) => {
     button.addEventListener("click", (e) => calculate(e.target.dataset.value));
 });
-
-//for keyboard
-
-document.addEventListener("keydown", (e) => {
-    const key = e.key;
-    if(key === "Enter"){
-        calculate("=");
-    }
-    else if(key === "Escape"){
-        calculate("C");
-    }
-    else if(key === "Backspace"){
-        calculate("DEL");
-        if(output === ""){
-            calculate("C");
-        }
-    }
-    else if (/[0-9]/.test(key) || ["%", "x", "÷", "+", "-", "=", "^", ".", "^", "(", ")"].includes(key)) {
-        const value = key === "*" ? "x" : key;
-        calculate(value);
-    }
-    else if(key !== "Shift"){
-        output = "Syntax Error"
-    }
-    display.value = output || "0";
-});
