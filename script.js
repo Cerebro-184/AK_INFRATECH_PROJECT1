@@ -4,7 +4,7 @@ const operators = ["%", "x", "÷", "+", "-", "=", "^", ".", "^"];
 let output = "";
 
 const calculate = (btn_val) => {
-    display.focus();
+    // display.focus();
     console.log(btn_val);
     if(btn_val === "C"){
         output = ""
