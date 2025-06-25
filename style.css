@@ -3,6 +3,9 @@ h2{
     text-align: center;
     color: rgb(121, 255, 246);
 }
+h2:hover{
+    color: rgb(173, 250, 255);
+}
 
 body{
     height: 100vh;
@@ -18,29 +21,33 @@ body{
     width: 200px;
     border-radius: 10px;
     padding: 10px 10px 10px;
-    background-color: rgb(0, 0, 0, 0.799);
-    box-shadow: 0px 0px 10px rgba(115, 115, 115, 0.444);
+    background-color: rgb(23, 23, 23);
+    box-shadow: 0px 0px 15px rgba(186, 185, 185, 0.444);
 }
 
 .buttons{
     width: 200px;
     display: grid;
     grid-gap: 4px;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .display{
     height: 45px;
     width: 195px;
     outline: #000000;
-    border-top: 0cap;
-    border-left: 0cap;
+    border: none;
     text-align: right;
     margin-bottom: 10px;
     font-size: 30px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(23, 23, 23);
     color: rgb(255, 255, 255);
     pointer-events: none;
+}
+
+p{
+    color: aliceblue;
+    text-align: center;
 }
 
 .btn{
@@ -52,7 +59,15 @@ body{
     cursor: pointer;
     background-color: #232323;
     color: rgb(121, 255, 246);
-    box-shadow: 1px 1px 0px rgba(115, 115, 115, 0.444);
+    box-shadow: 1px 1px 3px rgb(0, 0, 0);
+}
+
+.shadow{
+    height: 45px;
+    width: 45px;
+    border-radius: 45px;
+    border: none;
+    box-shadow: -1px -1px 3px rgba(165, 165, 165, 0.444);
 }
 
 .operator{
@@ -80,4 +95,6 @@ body{
     transform: scale(0.90);
     background-color: rgb(76, 186, 179);
 }
+
+
 
