@@ -1,15 +1,19 @@
 const display = document.querySelector(".display");
 const buttons = document.querySelectorAll("button");
-const operators = ["%", "x", "÷", "+", "-", "=", "^", ".", "^"];
+const operators = ["%", "x", "÷", "=", "^", "."];
 let output = "";
 
 const calculate = (btn_val) => {
+    // display.focus();
     console.log(btn_val);
     if(btn_val === "C"){
         output = ""
     }
     else if(btn_val === "DEL"){
         output = output.toString().slice(0, -1);
+    }
+    else if(btn_val === "+/-"){
+        output = "-(" + output + ")";
     }
     else if(btn_val === "=" && output !== ""){
         output = output.replace(/%/g, "/100*").replace(/x/g, "*").replace(/÷/g, "/").replace(/\^/g, "**");
